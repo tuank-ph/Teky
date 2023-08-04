@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link href="shop.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- ICONS -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    
+  </head>
+  <body>
+    <br> <br> <br> 
+    <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-4 px-3" href="#">TUANK.Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav justify-content-sm-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Smartphone
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                <li><a class="dropdown-item" href="#">Apple</a></li>
+                <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Laptops
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      
+        <div class="d-flex">
+          <button type="button" class="btn py-0 px-2">
+            <i class="fi fi-rs-user fis-4"></i>
+          </button>
+          <button type="button" class="btn py-0 px-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+            <i class="fi fi-rs-shopping-cart fis-4"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Cart -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart">
+      <div class="offcanvas-header pb-2">
+        <h5 class="offcanvas-title">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <hr class="my-0 mx-4">
+      <p class="bg-danger-subtle p-3 fw-bold">
+        Cần làm: Thanh toán, tổng tiền các sản phẩm.
+      </p>
+      <div class="offcanvas-body d-flex flex-column gap-4 " id="cart-items">
+
+        <!-- <div class="d-flex gap-2">
+          <img class="align-self-center" src="data/products-images/galaxy-s23-ultra.jpg" height="100">
+          <div class="d-flex flex-grow-1 flex-column justify-content-between">
+            <p class="m-0">Samsung Galaxy S23 Ultra</p>
+            <div class="d-flex flex-wrap mb-2 gap-1"><span class="badge rounded-1 text-secondary-emphasis border-secondary border fw-medium"><i class="bi bi-memory"></i> 16 GB</span><span class="badge rounded-1 text-secondary-emphasis border-secondary border fw-medium"><i class="bi bi-hdd-fill"></i> 256 GB</span><span class="badge rounded-1 text-secondary-emphasis border-secondary border fw-medium"><i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i><span class="ps-1">6.8"</span></span></div>
+            <div class="input-group justify-content-end" style="min-width: max-content;">
+              <button type="button" class="btn btn-primary  pt-2" style="pointer-events: all; cursor: not-allowed" disabled="">
+                <i class="fi fi-rs-minus-small"></i>
+              </button>
+              <input type="number" class="form-control text-center" value="1" style="max-width: 40px;">
+              <button type="button" class="btn btn-primary  pt-2">
+                <i class="fi fi-rs-plus-small"></i>
+              </button>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-between">
+            <div class="text-end">
+              <p class="m-0 w-fit">$1299</p>
+            </div>
+            <button type="button" class="btn btn-outline-primary pt-2" style="width: min-content;">
+              <i class="fi fi-bs-cart-minus"></i>
+            </button>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="row m-3">
+      <div class="col-3">
+        <div class="card p-2 pb-5">
+          <div class="card-body">
+            <h1 class="header fw-bold pb-3">Filters</h1>
+            <p class="bg-warning-subtle p-3 fw-bold">
+              [in-progress] Lọc sản phẩm: Front-End, chưa hoạt động.
+            </p>
+            <div class="d-flex flex-column gap-2 ps-2">
+              <div>
+                <h4 class="fw-medium">Brand</h4>
+                <p class="bg-info-subtle p-3 fw-bold">
+                  [in-progress] Lọc theo hãng sản xuất
+                </p>
+              </div>
+              <hr>
+              <div>
+                <h4 class="fw-medium">Price</h4>
+                <div class="input-group">
+                  <span class="input-group-text me-2">From</span>
+                  <span class="input-group-text p-2">$</span>
+                  <input type="number" class="form-control p-2" id="filter-price-min" placeholder="100" value="0">
+                  <span class="input-group-text mx-2">to</span>
+                  <span class="input-group-text p-2">$</span>
+                  <input type="number" class="form-control p-2" id="filter-price-max" placeholder="500" value="2899">
+                </div>
+              </div>
+              <hr>
+              <div>
+                <h4 class="fw-medium">Ram</h4>
+                <div class="d-flex gap-2 flex-wrap">
+                  <input type="checkbox" class="btn-check" id="filter-ram-2" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-ram-2">2 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-ram-4" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-ram-4">4 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-ram-6" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-ram-6">6 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-ram-8" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-ram-8">8 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-ram-12" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-ram-12">12 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-ram-16" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-ram-16">16 GB</label>
+                </div>
+              </div>
+              <hr>
+              <div>
+                <h4 class="fw-medium">Storage</h4>
+                <div class="d-flex gap-2 flex-wrap">
+                  <input type="checkbox" class="btn-check" id="filter-storage-32" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-storage-32">32 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-storage-64" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-storage-64">64 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-storage-128" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-storage-128">128 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-storage-256" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-storage-256">256 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-storage-512" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-storage-512">512 GB</label>
+                  <input type="checkbox" class="btn-check" id="filter-storage-1024" checked autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="filter-storage-1024">1 TB</label>
+                </div>
+              </div>
+              <hr>
+              <div>
+                <h4 class="fw-medium">Display size</h4>
+                <div class="input-group">
+                  <span class="input-group-text me-2">From</span>
+                  <input type="number" class="form-control p-2" id="filter-display-min" placeholder="4.0" value="5.0">
+                  <span class="input-group-text p-2">in</span>
+                  <span class="input-group-text mx-2">to</span>
+                  <input type="number" class="form-control p-2" id="filter-display-min" placeholder="8.0" value="7.0">
+                  <span class="input-group-text p-2">in</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-9 ">
+        <div class="card p-2">
+          <div class="card-body">
+            <h1 class="header fw-bold pb-3">Products</h1>
+            <p class="bg-warning-subtle p-3 fw-bold w-fit">
+              [in-progress] Sắp xếp danh sách sản phẩm: Front-End, chưa hoạt động.
+            </p>
+            <!-- <p class="bg-success-subtle p-3 fw-bold" style="max-width: fit-content;">
+              Completed: Đã có thể thêm sản phẩm vào giỏ hàng
+            </p> -->
+            <div class="d-flex flex-wrap mb-3 gap-1">
+              <h4 class="mb-0 me-3 align-self-center fw-semibold">Sort by:</h4>
+              <input type="radio" class="btn-check" name="sort" id="default" autocomplete="off" checked>
+              <label class="btn btn-outline-primary" for="default">Newest Arrivals</label>
+              <input type="radio" class="btn-check" name="sort" id="priceLow" autocomplete="off">
+              <label class="btn btn-outline-primary" for="priceLow">Price: Low to High</label>
+              <input type="radio" class="btn-check" name="sort" id="priceHigh" autocomplete="off">
+              <label class="btn btn-outline-primary" for="priceHigh">Price: High to Low</label>
+              <input type="radio" class="btn-check" name="sort" id="discount" autocomplete="off">
+              <label class="btn btn-outline-primary" for="discount">Most Discounted</label>
+            </div>
+
+            <div class="d-flex gap-2" id="product-container" >
+            </div>
+            <!-- <div class="card pt-3" style="max-width: 14rem;">
+              <img src="shop-images/iphone-14-pro-max.jpg" class="card-img-top p-3">
+              <div class="card-body d-flex flex-column">
+                <p class="card-title">IPhone 14 Pro Max</p>
+                <div class="flex-wrap mb-2 d-inline-flex gap-1">
+                  <span class="badge rounded-1 text-secondary-emphasis text-bg-secondary bg-opacity-25 fw-medium">
+                    <i class="bi bi-apple"></i> Apple
+                  </span>
+                  <span class="badge rounded-1 text-secondary-emphasis text-bg-secondary bg-opacity-25 fw-medium">
+                    <i class="bi bi-memory"></i> 8 GB
+                  </span>
+                  <span class="badge rounded-1 text-secondary-emphasis text-bg-secondary bg-opacity-25 fw-medium">
+                    <i class="bi bi-hdd-fill"></i> 256 GB
+                  </span>
+                </div>
+                <div class="d-flex flex-column flex-grow-1 justify-content-end">
+                  <div class="mb-2">
+                    <p class="text-danger fw-bold d-inline">$1399</p>
+                    <small class="text-decoration-line-through text-secondary fw-normal">$1599</small>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <button type="button" class="btn btn-outline-primary flex-grow-1">Buy now</button>
+                    <button type="button" class="btn btn-primary float-end">
+                      <i class="bi bi-cart-plus-fill"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>   -->
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <br> <br>
+    <!-- <br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br> -->
+
+    <footer class="bg-dark py-5" data-bs-theme="dark">
+      <div class="container py-5">
+        <div class="row gap-5">
+          <div class="col">
+            <h1 class="text-light header fsx-5 py-4">Sign up</h1>
+            <p class="text-light header text-body-secondary fs-3">Stay in the loop and get exclusive content by subscribing to our newsletter today</p>
+            <div class="input-group py-2">
+              <input type="text" class="form-control rounded-0 py-3 px-4" placeholder="Email address">
+              <button class="btn btn-primary px-3" type="button" onclick="Toast('emailSignup')">Sign up</button>
+            </div>
+          </div>
+
+          <div class="col">
+            <h1 class="text-light header fsx-5 py-4">Find us</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501726.5407051582!2d106.36557848471604!3d10.75461814779714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2s!4v1690740719741!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="col">
+            <h1 class="text-light header fsx-5 py-4">About me</h1>
+            <p class="text-light text-body-secondary fw-light">Hey there! I'm Phạm Tuấn Khanh, a 15-year-old high school student with a big passion for web development. I love the creative process of building websites and seeing my ideas come to life on the screen. It's like painting with code! I'm constantly learning and growing in this field, always on the lookout for new techniques and trends. Web development is my playground, and I can't wait to share my creations with you!</p>
+          </div>
+          
+        </div>
+      </div>
+      <!-- <br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br> -->
+    </footer>
+
+    <!-- Toast messages -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 ">
+
+      <!-- Email sign up -->
+
+      <div class="toast align-items-center text-bg-success" role="alert" id="emailSignup">
+        <div class="d-flex px-2">
+          <div class="toast-body d-flex align-items-center">
+            <i class="fi fi-ss-check-circle fis-5 me-3 pb-1 " style="line-height: 0;"></i>
+            Subscribe successful! You will be receiving emails from us.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+
+      <!-- Thông báo thêm sản phẩm vào giỏ hàng -->
+      <div class="toast align-items-center" id="addedToCart" role="alert">
+        <div class="d-flex px-2">
+          <div class="toast-body d-flex flex-column ">
+            <div class="d-flex align-items-center">
+              <i class="fi fi-ss-check-circle fis-5 me-3 pb-1 text-success" style="line-height: 0;"></i>
+              Success! Your selection has been added to your shopping cart.
+            </div>
+            <div class="mt-2 pt-2 border-top align-self-end">
+              <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="toast" onclick="bootstrap.Offcanvas.getOrCreateInstance($('#offcanvasCart')).show()">Go to cart</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hộp thoại xác nhận xóa sản phẩm khỏi giỏ hàng -->
+      <div class="modal fade" id="removeConfirmation" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Remove item</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to remove this item?
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thông báo xóa sản phẩm trong giỏ hàng -->
+      <div class="toast align-items-center text-bg-success" role="alert" id="removedFromCart">
+        <div class="d-flex px-2">
+          <div class="toast-body d-flex align-items-center">
+            <i class="fi fi-ss-check-circle fis-5 me-3 pb-1 " style="line-height: 0;"></i>
+            An item has been removed from your shopping cart.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>

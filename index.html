@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- ICONS -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+  
+  </head>
+  <body>
+    <br> <br>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-4 px-3" href="#">TUANK.Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav justify-content-sm-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Smartphone
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                <li><a class="dropdown-item" href="#">Apple</a></li>
+                <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Laptops
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      
+        <div class="d-flex">
+          <button type="button" class="btn py-0 px-2">
+            <i class="fi fi-rs-user fis-4"></i>
+          </button>
+          <button type="button" class="btn py-0 px-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+            <i class="fi fi-rs-shopping-cart fis-4"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cart -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart">
+      <div class="offcanvas-header pb-2">
+        <h5 class="offcanvas-title">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <hr class="my-0 mx-4">
+      <p class="bg-danger-subtle p-3 fw-bold">
+        Cần làm: Thanh toán, tổng tiền các sản phẩm.
+      </p>
+      <div class="offcanvas-body d-flex flex-column gap-4 " id="cart-items">
+
+        <!-- <div class="d-flex gap-2">
+          <img class="align-self-center" src="data/products-images/galaxy-s23-ultra.jpg" height="100">
+          <div class="d-flex flex-grow-1 flex-column justify-content-between">
+            <p class="m-0">Samsung Galaxy S23 Ultra</p>
+            <div class="d-flex flex-wrap mb-2 gap-1"><span class="badge rounded-1 text-secondary-emphasis border-secondary border fw-medium"><i class="bi bi-memory"></i> 16 GB</span><span class="badge rounded-1 text-secondary-emphasis border-secondary border fw-medium"><i class="bi bi-hdd-fill"></i> 256 GB</span><span class="badge rounded-1 text-secondary-emphasis border-secondary border fw-medium"><i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i><span class="ps-1">6.8"</span></span></div>
+            <div class="input-group justify-content-end" style="min-width: max-content;">
+              <button type="button" class="btn btn-primary  pt-2" style="pointer-events: all; cursor: not-allowed" disabled="">
+                <i class="fi fi-rs-minus-small"></i>
+              </button>
+              <input type="number" class="form-control text-center" value="1" style="max-width: 40px;">
+              <button type="button" class="btn btn-primary  pt-2">
+                <i class="fi fi-rs-plus-small"></i>
+              </button>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-between">
+            <div class="text-end">
+              <p class="m-0 w-fit">$1299</p>
+            </div>
+            <button type="button" class="btn btn-outline-primary pt-2" style="width: min-content;">
+              <i class="fi fi-bs-cart-minus"></i>
+            </button>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-content">
+      <div id="introduction-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators justify-content-start my-3 mx-5">
+          <button type="button" data-bs-target="#introduction-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#introduction-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#introduction-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1000">
+            <img src="home-images/introduction-1.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="home-images/introduction-2.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="home-images/introduction-3.jpg" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev " type="button" data-bs-target="#introduction-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#introduction-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <a href="#">
+        <a href="shop.html" class="btn btn-primary btn-lg px-5 py-2 fw-bold">
+          Shop now <i class="bi bi-chevron-right"></i>
+        </a>
+      </a>
+      <h1 class="text-white w-50 fw-light">Transform the way you <span class="fw-bold">work</span> and <span class="fw-bold">play</span> with our exceptional tech products</h1>
+    </div>
+    <br>
+    <div class="container">
+      <h1 class="text-center my-5 fw-bold header fsx-5">NEW ARRIVALS</h1>
+      <div class="row">
+        <div class="col-4">
+          <h3 class="m-4">Samsung s23 Ultra</h3>
+          <img src="home-images/new-arrivals-1.avif" height="300">
+        </div>
+        <div class="col-8">
+          <iframe class="w-100 h-100" src="https://www.youtube-nocookie.com/embed/uhQgPBKhVq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="px-sm-5 mx-sm-5 py-5">
+        <h1 class="fst-italic px-sm-5 mx-sm-5 py-1 fw-bold">" The Samsung Galaxy S23 Ultra is the best smartphone of the year so far. "</h1>
+        <div class="float-end">
+          <a class="link-dark text-end opacity-75 py-3 fs-5 px-4" href="https://www.zdnet.com/article/samsung-galaxy-s23-ultra-review/">zdnet.com</a>
+          <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('galaxy-s23-ultra'); Toast('addedToCart')">Add to cart <i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <br> <br> <br>
+    <div class="container text-uppercase py-4"><h1 class="fw-bold">Asus ROG Strix SCAR 15</h1></div>
+    <div class="w-100 px-5"><img class="w-100 rounded-3" src="home-images/new-arrivals-2.jpg"></div>
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-6">
+          <ul class="fs-4 text-opacity-50">
+            <li class="py-1">CPU: Intel Core i7-10875H 2.3GHz up to 5.1GHz 16MB</li>
+            <li class="py-1">RAM: 16GB (8GBx2) DDR4 3200MHz (2x SO-DIMM socket, up to 32GB SDRAM)</li>
+            <li class="py-1">DISK:	1TB SSD PCIE G3X4 (3 slot)</li>
+            <li class="py-1">VGA:	NVIDIA GeForce RTX 2060 6GB GDDR6</li>
+            <li class="py-1">DISPLAY: 15.6" FHD (1920 x 1080) IPS Non-Glare, NanoEdge, 100% sRGB, 300nits, 240Hz/3ms</li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <h1>World's first 300hz 3ms display with ROG Keystone technolody & Liquid metal cooling</h1>
+
+
+          <ul class="list-group content w-75 my-2 fs-5">
+            <li class="list-group-item d-flex justify-content-between opacity-75">
+              <div>
+                <input class="form-check-input me-1" type="radio" name="listGroupRadio" id="15">
+                <label class="form-check-label" for="15">15" FHD Display</label>
+              </div>
+              <small>$1.499</small>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <input class="form-check-input me-1" type="radio" name="listGroupRadio" id="17" checked>
+                  <label class="form-check-label" for="17">17" QHD Display</label>
+                </div>
+                <small>$2.199</small>
+              </div>
+              <small class="text-secondary">Enhanced bigger crispier display for exceptional experience</small>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-lg">
+            Buy now <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="container">
+      <h1 class="text-center fw-bold my-5 header fsx-5">FIND YOUR PRODUCT</h1>
+      <div class="row gap-3 product-categories py-2">
+        <div class="col bg-body-secondary">
+          <img src="home-images/find-your-product-1.webp" height="200" style="right: 0px; bottom: -20px;">
+          <br> <br> <br> <br> <br> <br> <br> <br> <br>
+          <div class="px-3 py-2 fs-5">Smartphone</div>
+        </div>
+        <div class="col bg-body-secondary">
+          <img src="home-images/find-your-product-2.webp" height="350" style="right: -80px; bottom: -60px;">
+          <br> <br> <br> <br> <br> <br> <br> <br> <br>
+          <div class="px-3 py-2 fs-5">Gaming laptop</div>
+        </div>
+        <div class="col bg-body-secondary">
+          <img src="home-images/find-your-product-3.webp" height="300" style="right: -10px; bottom: -40px;">
+          <br> <br> <br> <br> <br> <br> <br> <br> <br>
+          <div class="px-3 py-2 fs-5">Ultrabook</div>
+        </div>
+      </div>
+      <div class="row gap-3 product-categories py-2">
+        <div class="col bg-body-secondary">
+          <img src="home-images/find-your-product-4.png" height="250" style="right: -50px; bottom: -20px;">
+          <br> <br> <br> <br> <br> <br> <br> <br> <br>
+          <div class="px-3 py-2 fs-5">Smartwatch</div>
+        </div>
+        <div class="col bg-body-secondary">
+          <img src="home-images/find-your-product-5.png" height="250" style="right: -10px; bottom: -50px;">
+          <br> <br> <br> <br> <br> <br> <br> <br> <br>
+          <div class="px-3 py-2 fs-5">Tablet</div>
+        </div>
+        <div class="col bg-body-secondary">
+          <img src="home-images/find-your-product-6.webp" height="280" style="right: -10px; bottom: -40px;">
+          <br> <br> <br> <br> <br> <br> <br> <br> <br>
+          <div class="px-3 py-2 fs-5">Accessories</div>
+        </div>
+      </div>
+    </div>
+
+    <br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br>
+
+    <footer class="bg-dark py-5" data-bs-theme="dark">
+      <div class="container py-5">
+        <div class="row gap-5">
+          <div class="col">
+            <h1 class="text-light header fsx-5 py-4">Sign up</h1>
+            <p class="text-light header text-body-secondary fs-3">Stay in the loop and get exclusive content by subscribing to our newsletter today</p>
+            <div class="input-group py-2">
+              <input type="text" class="form-control rounded-0 py-3 px-4" placeholder="Email address">
+              <button class="btn btn-primary px-3" type="button" onclick="Toast('emailSignup')">Sign up</button>
+            </div>
+          </div>
+
+          <div class="col">
+            <h1 class="text-light header fsx-5 py-4">Find us</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501726.5407051582!2d106.36557848471604!3d10.75461814779714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2s!4v1690740719741!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="col">
+            <h1 class="text-light header fsx-5 py-4">About me</h1>
+            <p class="text-light text-body-secondary fw-light">Hey there! I'm Phạm Tuấn Khanh, a 15-year-old high school student with a big passion for web development. I love the creative process of building websites and seeing my ideas come to life on the screen. It's like painting with code! I'm constantly learning and growing in this field, always on the lookout for new techniques and trends. Web development is my playground, and I can't wait to share my creations with you!</p>
+          </div>
+          
+        </div>
+      </div>
+      <br> <br> <br> <br><br> <br> <br> <br><br> <br> <br> <br>
+    </footer>
+
+    <!-- Toast messages -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 ">
+      <div class="toast align-items-center" id="addedToCart" role="alert">
+        <div class="d-flex px-2">
+          <div class="toast-body d-flex flex-column ">
+            <div class="d-flex align-items-center">
+              <i class="fi fi-ss-check-circle fis-5 me-3 pb-1 text-success" style="line-height: 0;"></i>
+              Success! Your selection has been added to your shopping cart.
+            </div>
+            <div class="mt-2 pt-2 border-top align-self-end">
+              <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="toast" onclick="bootstrap.Offcanvas.getOrCreateInstance($('#offcanvasCart')).show()">Go to cart</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email sign up -->
+      <div class="toast align-items-center text-bg-success" role="alert" id="emailSignup">
+        <div class="d-flex px-2">
+          <div class="toast-body d-flex align-items-center">
+            <i class="fi fi-ss-check-circle fis-5 me-3 pb-1 " style="line-height: 0;"></i>
+            Subscribe successful! You will be receiving emails from us.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+      
+    </div>
+
+    
+  </div>
+
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
